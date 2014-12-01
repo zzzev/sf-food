@@ -1,0 +1,141 @@
+@import "compass/reset";
+
+$headerHeight: 1.5em;;
+
+$waterFill: #434DB0;
+$cityFill: #9A7470;
+$otherLandFill: #222;
+$accent: #F67C09;
+$accent2: #FFD63D;
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.25);
+        color: white;
+        height: $headerHeight;
+        line-height: $headerHeight;
+    }
+    h1 {
+        margin: 0 5px 0 20px;
+        float: left;
+        font-weight: 100;
+    }
+    h2 {
+        margin: 0px;
+        float: left;
+        font-style: italic;
+        font-weight: 100;
+        a {
+            text-decoration: none;
+            color: white;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .loading {
+        margin-top: 100px;
+        font-size: 1.5em;
+        .label {
+            font-style: italic;
+        }
+        .dot {
+            animation: fadein linear 1s infinite alternate;
+            -webkit-animation: fadein linear 1s infinite alternate;
+        }
+        .delay-1 {
+            animation-delay: 0.6s;
+            -webkit-animation-delay: 0.6s;
+        }
+        .delay-2 {
+            animation-delay: 0.6s;
+            -webkit-animation-delay: 0.6s;
+        }
+    }
+    .error {
+        color: red;
+        margin-top: 100px;
+    }
+    .hidden {
+        display: none;
+    }
+    .attr {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        font-size: 0.5em;
+        height: 1em;
+        line-height: 1em;
+        background: black;
+        color: white;
+        padding: 1px 0 0 2px;
+    }
+    svg {
+        display: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        fill: black;
+        background: $waterFill;
+        .geounit {
+            &.san-francisco {
+                fill: $cityFill;
+                stroke: rgba(255,255,255,0.5);
+                stroke-width: 1px;
+            }
+            &.other {
+                fill: $otherLandFill;
+            }
+        }
+        .street {
+            stroke: white;
+            fill: none;
+            opacity: 0.25;
+            &.hwy-1-northbound,
+            &.hwy-1-southbound,
+            &.hwy-101-northbound,
+            &.hwy-101-southbound,
+            &.market-st,
+            &.fulton-st,
+            &.van-ness-ave,
+            &.masonic-ave,
+            &.geary-blvd,
+            &.lincoln-way,
+            &.great-hwy,
+            &.skyline-blvd,
+            &.i-280-southbound,
+            &.i-280-northbound,
+            &.i-80-westbound,
+            &.i-80-eastbound,
+            &.oak-st,
+            &.fell-st,
+            &.the-embarcadero,
+            &.sunset-blvd,
+            &.park-presidio-blvd,
+            &.num-19th-ave {
+                stroke: orange;
+                opacity: 1;
+            }
+        }
+        .permit {
+            fill: white;
+            opacity: 0.25;
+        }
+    }
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-webkit-keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

@@ -1,0 +1,201 @@
+/* line 5, ../../../../.rvm/gems/ruby-2.0.0-p0@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../.rvm/gems/ruby-2.0.0-p0@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../.rvm/gems/ruby-2.0.0-p0@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../.rvm/gems/ruby-2.0.0-p0@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../.rvm/gems/ruby-2.0.0-p0@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../.rvm/gems/ruby-2.0.0-p0@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../.rvm/gems/ruby-2.0.0-p0@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../.rvm/gems/ruby-2.0.0-p0@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../.rvm/gems/ruby-2.0.0-p0@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 11, ../sass/style.scss */
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+/* line 14, ../sass/style.scss */
+body .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+  height: 1.5em;
+  line-height: 1.5em;
+}
+/* line 24, ../sass/style.scss */
+body h1 {
+  margin: 0 5px 0 20px;
+  float: left;
+  font-weight: 100;
+}
+/* line 29, ../sass/style.scss */
+body h2 {
+  margin: 0px;
+  float: left;
+  font-style: italic;
+  font-weight: 100;
+}
+/* line 34, ../sass/style.scss */
+body h2 a {
+  text-decoration: none;
+  color: white;
+}
+/* line 37, ../sass/style.scss */
+body h2 a:hover {
+  text-decoration: underline;
+}
+/* line 42, ../sass/style.scss */
+body .loading {
+  margin-top: 100px;
+  font-size: 1.5em;
+}
+/* line 45, ../sass/style.scss */
+body .loading .label {
+  font-style: italic;
+}
+/* line 48, ../sass/style.scss */
+body .loading .dot {
+  animation: fadein linear 1s infinite alternate;
+  -webkit-animation: fadein linear 1s infinite alternate;
+}
+/* line 52, ../sass/style.scss */
+body .loading .delay-1 {
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+}
+/* line 56, ../sass/style.scss */
+body .loading .delay-2 {
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+}
+/* line 61, ../sass/style.scss */
+body .error {
+  color: red;
+  margin-top: 100px;
+}
+/* line 65, ../sass/style.scss */
+body .hidden {
+  display: none;
+}
+/* line 68, ../sass/style.scss */
+body .attr {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 0.5em;
+  height: 1em;
+  line-height: 1em;
+  background: black;
+  color: white;
+  padding: 1px 0 0 2px;
+}
+/* line 79, ../sass/style.scss */
+body svg {
+  display: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  fill: black;
+  background: #434DB0;
+}
+/* line 88, ../sass/style.scss */
+body svg .geounit.san-francisco {
+  fill: #9A7470;
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 1px;
+}
+/* line 93, ../sass/style.scss */
+body svg .geounit.other {
+  fill: #222;
+}
+/* line 97, ../sass/style.scss */
+body svg .street {
+  stroke: white;
+  fill: none;
+  opacity: 0.25;
+}
+/* line 101, ../sass/style.scss */
+body svg .street.hwy-1-northbound, body svg .street.hwy-1-southbound, body svg .street.hwy-101-northbound, body svg .street.hwy-101-southbound, body svg .street.market-st, body svg .street.fulton-st, body svg .street.van-ness-ave, body svg .street.masonic-ave, body svg .street.geary-blvd, body svg .street.lincoln-way, body svg .street.great-hwy, body svg .street.skyline-blvd, body svg .street.i-280-southbound, body svg .street.i-280-northbound, body svg .street.i-80-westbound, body svg .street.i-80-eastbound, body svg .street.oak-st, body svg .street.fell-st, body svg .street.the-embarcadero, body svg .street.sunset-blvd, body svg .street.park-presidio-blvd, body svg .street.num-19th-ave {
+  stroke: orange;
+  opacity: 1;
+}
+/* line 127, ../sass/style.scss */
+body svg .permit {
+  fill: white;
+  opacity: 0.25;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
