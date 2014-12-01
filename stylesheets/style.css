@@ -63,67 +63,78 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 5, ../sass/style.scss */
+/* line 11, ../sass/style.scss */
 body {
   font-family: sans-serif;
   text-align: center;
 }
-/* line 8, ../sass/style.scss */
+/* line 14, ../sass/style.scss */
 body .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.25);
   color: white;
   height: 1.5em;
   line-height: 1.5em;
 }
-/* line 18, ../sass/style.scss */
+/* line 24, ../sass/style.scss */
 body h1 {
-  margin: 0px 10px;
+  margin: 0 5px 0 20px;
   float: left;
+  font-weight: 100;
 }
-/* line 22, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
 body h2 {
   margin: 0px;
   float: left;
   font-style: italic;
+  font-weight: 100;
 }
-/* line 27, ../sass/style.scss */
+/* line 34, ../sass/style.scss */
+body h2 a {
+  text-decoration: none;
+  color: white;
+}
+/* line 37, ../sass/style.scss */
+body h2 a:hover {
+  text-decoration: underline;
+}
+/* line 42, ../sass/style.scss */
 body .loading {
   margin-top: 100px;
   font-size: 1.5em;
 }
-/* line 30, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 body .loading .label {
   font-style: italic;
 }
-/* line 33, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 body .loading .dot {
   animation: fadein linear 1s infinite alternate;
   -webkit-animation: fadein linear 1s infinite alternate;
 }
-/* line 37, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 body .loading .delay-1 {
   animation-delay: 0.6s;
   -webkit-animation-delay: 0.6s;
 }
-/* line 41, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 body .loading .delay-2 {
   animation-delay: 0.6s;
   -webkit-animation-delay: 0.6s;
 }
-/* line 46, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 body .error {
   color: red;
   margin-top: 100px;
 }
-/* line 50, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 body .hidden {
   display: none;
 }
-/* line 53, ../sass/style.scss */
+/* line 68, ../sass/style.scss */
 body .attr {
   position: fixed;
   bottom: 0;
@@ -135,20 +146,40 @@ body .attr {
   color: white;
   padding: 1px 0 0 2px;
 }
-/* line 64, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 body svg {
   display: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  fill: black;
+  background: #434DB0;
 }
-/* line 71, ../sass/style.scss */
-body svg .subunit.san-francisco {
-  fill: rgba(100, 100, 200, 0.75);
+/* line 88, ../sass/style.scss */
+body svg .geounit.san-francisco {
+  fill: #9A7470;
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 1px;
 }
-/* line 74, ../sass/style.scss */
-body svg .subunit.other {
+/* line 93, ../sass/style.scss */
+body svg .geounit.other {
+  fill: #222;
+}
+/* line 97, ../sass/style.scss */
+body svg .street {
+  stroke: white;
+  fill: none;
+  opacity: 0.25;
+}
+/* line 101, ../sass/style.scss */
+body svg .street.hwy-1-northbound, body svg .street.hwy-1-southbound, body svg .street.hwy-101-northbound, body svg .street.hwy-101-southbound, body svg .street.market-st, body svg .street.fulton-st, body svg .street.van-ness-ave, body svg .street.masonic-ave, body svg .street.geary-blvd, body svg .street.lincoln-way, body svg .street.great-hwy, body svg .street.skyline-blvd, body svg .street.i-280-southbound, body svg .street.i-280-northbound, body svg .street.i-80-westbound, body svg .street.i-80-eastbound, body svg .street.oak-st, body svg .street.fell-st, body svg .street.the-embarcadero, body svg .street.sunset-blvd, body svg .street.park-presidio-blvd, body svg .street.num-19th-ave {
+  stroke: orange;
+  opacity: 1;
+}
+/* line 127, ../sass/style.scss */
+body svg .permit {
+  fill: white;
   opacity: 0.25;
 }
 

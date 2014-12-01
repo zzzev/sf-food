@@ -2,6 +2,12 @@
 
 $headerHeight: 1.5em;;
 
+$waterFill: #434DB0;
+$cityFill: #9A7470;
+$otherLandFill: #222;
+$accent: #F67C09;
+$accent2: #FFD63D;
+
 body {
     font-family: sans-serif;
     text-align: center;
@@ -10,19 +16,28 @@ body {
         top: 0;
         left: 0;
         right: 0;
-        background: rgba(0,0,0,0.75);
+        background: rgba(0,0,0,0.25);
         color: white;
         height: $headerHeight;
         line-height: $headerHeight;
     }
     h1 {
-        margin: 0px 10px;
+        margin: 0 5px 0 20px;
         float: left;
+        font-weight: 100;
     }
     h2 {
         margin: 0px;
         float: left;
         font-style: italic;
+        font-weight: 100;
+        a {
+            text-decoration: none;
+            color: white;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
     .loading {
         margin-top: 100px;
@@ -67,13 +82,51 @@ body {
         bottom: 0;
         left: 0;
         right: 0;
-        .subunit {
+        fill: black;
+        background: $waterFill;
+        .geounit {
             &.san-francisco {
-                fill: rgba(100,100,200,0.75);
+                fill: $cityFill;
+                stroke: rgba(255,255,255,0.5);
+                stroke-width: 1px;
             }
             &.other {
-                opacity: 0.25;
+                fill: $otherLandFill;
             }
+        }
+        .street {
+            stroke: white;
+            fill: none;
+            opacity: 0.25;
+            &.hwy-1-northbound,
+            &.hwy-1-southbound,
+            &.hwy-101-northbound,
+            &.hwy-101-southbound,
+            &.market-st,
+            &.fulton-st,
+            &.van-ness-ave,
+            &.masonic-ave,
+            &.geary-blvd,
+            &.lincoln-way,
+            &.great-hwy,
+            &.skyline-blvd,
+            &.i-280-southbound,
+            &.i-280-northbound,
+            &.i-80-westbound,
+            &.i-80-eastbound,
+            &.oak-st,
+            &.fell-st,
+            &.the-embarcadero,
+            &.sunset-blvd,
+            &.park-presidio-blvd,
+            &.num-19th-ave {
+                stroke: orange;
+                opacity: 1;
+            }
+        }
+        .permit {
+            fill: white;
+            opacity: 0.25;
         }
     }
 }
