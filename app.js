@@ -42,7 +42,7 @@ var INDEX_NAME =  9,
 
 //d3.json('/sf-mobile-food-permits.json', jsonLoaded);
 
-d3.json('/data/bay.json', function(error, data) {
+d3.json('data/bay.json', function(error, data) {
     d3.select('.loading').remove();
     if (error) {
         console.log("An error occured: " + error);
