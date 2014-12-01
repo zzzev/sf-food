@@ -149,6 +149,7 @@ body .attr {
 }
 /* line 80, ../sass/style.scss */
 body .tooltip {
+  pointer-events: none;
   position: absolute;
   top: -300px;
   left: -300px;
@@ -165,7 +166,7 @@ body .tooltip {
   transition: opacity 0.2s;
   opacity: 1;
 }
-/* line 96, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 body .tooltip h1 {
   font-size: 1.2em;
   line-height: 1.5em;
@@ -173,20 +174,20 @@ body .tooltip h1 {
   height: 1.5em;
   overflow: hidden;
 }
-/* line 103, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 body .tooltip .food-type {
   font-size: 0.8em;
   line-height: 1.2em;
 }
-/* line 107, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
 body .tooltip .addr {
   margin-top: 0.5em;
 }
-/* line 110, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 body .tooltip.fadeout {
   opacity: 0;
 }
-/* line 114, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 body svg {
   display: fixed;
   top: 0;
@@ -196,28 +197,28 @@ body svg {
   fill: black;
   background: #2C365E;
 }
-/* line 123, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
 body svg .geounit.san-francisco {
   fill: #484D6D;
   stroke: rgba(255, 255, 255, 0.5);
   stroke-width: 1px;
 }
-/* line 128, ../sass/style.scss */
+/* line 129, ../sass/style.scss */
 body svg .geounit.other {
   fill: #2B193D;
 }
-/* line 132, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 body svg .street {
   stroke: white;
   fill: none;
   opacity: 0.25;
 }
-/* line 136, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 body svg .street.hwy-1-northbound, body svg .street.hwy-1-southbound, body svg .street.hwy-101-northbound, body svg .street.hwy-101-southbound, body svg .street.market-st, body svg .street.fulton-st, body svg .street.van-ness-ave, body svg .street.masonic-ave, body svg .street.geary-blvd, body svg .street.lincoln-way, body svg .street.great-hwy, body svg .street.skyline-blvd, body svg .street.i-280-southbound, body svg .street.i-280-northbound, body svg .street.i-80-westbound, body svg .street.i-80-eastbound, body svg .street.oak-st, body svg .street.fell-st, body svg .street.the-embarcadero, body svg .street.sunset-blvd, body svg .street.park-presidio-blvd, body svg .street.num-19th-ave {
   stroke: #4B8F8C;
   opacity: 1;
 }
-/* line 162, ../sass/style.scss */
+/* line 163, ../sass/style.scss */
 body svg .permit {
   fill: white;
   opacity: 0.5;
