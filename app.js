@@ -50,9 +50,16 @@ d3.json('data/bay.json', function(error, data) {
         var width = window.innerWidth,
             height = window.innerHeight;
 
-        var svg = d3.select("body").append("svg")
+        var body = d3.select("body");
+        var svg = body.append("svg")
             .attr("width", width)
             .attr("height", height);
+
+        var tooltip = body.append('div').classed('tooltip', true);
+        var tooltipLabelName = tooltip.append('h1');
+        var tooltipLabelFood = tooltip.append('div').classed('food-type', true);
+        var tooltipLabelAddr = tooltip.append('div').classed('addr', true);
+        var tooltipTimeout;
 
         var geoData = topojson.feature(data.topo, data.topo.objects.geo);
 
@@ -101,7 +108,21 @@ d3.json('data/bay.json', function(error, data) {
                     return projection([d[INDEX_LON], d[INDEX_LAT]])[0];
                 }).attr("cy", function(d) {
                     return projection([d[INDEX_LON], d[INDEX_LAT]])[1];
-                }).attr("r", 5);
+                }).attr("r", 5)
+                .on('mouseover', function(d) {
+                    tooltip.attr('style', 'left:' + this.attributes.cx.value + 'px;' + 
+                        'top:' + this.attributes.cy.value + 'px;');
+                    tooltipLabelName.text(d[INDEX_NAME]);
+                    tooltipLabelFood.text(d[INDEX_FOOD]);
+                    tooltipLabelAddr.text(d[INDEX_ADDR]);
+                    tooltip.classed('fadeout', false);
+                    if (tooltipTimeout) {
+                        clearTimeout(tooltipTimeout);
+                    }
+                    tooltipTimeout = setTimeout(function() {
+                        tooltip.classed('fadeout', true);
+                    }, 2500);
+                });
     }
 });
 
